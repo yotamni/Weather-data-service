@@ -25,14 +25,25 @@ namespace WeatherDataService.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://api.openweathermap.org/data/2.5/weather?q=Tel%20Aviv&appid=750e0bb1e967316" +
-            "32166f191b3377bae")]
+        [global::System.Configuration.DefaultSettingValueAttribute("750e0bb1e96731632166f191b3377bae")]
         public string key {
             get {
                 return ((string)(this["key"]));
             }
             set {
                 this["key"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://api.openweathermap.org/data/2.5/weather?q=")]
+        public string url {
+            get {
+                return ((string)(this["url"]));
+            }
+            set {
+                this["url"] = value;
             }
         }
     }

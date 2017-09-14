@@ -4,21 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WeatherDataApp
+namespace WeatherDataService
 {
     public class Location
     {
-        private string cityName;
-        private string country { get; set; }
-        private string weatherDescription { get; set; }
-        private string temperature { get; set; }
-        private string temperatureMax { get; set; }
-        private string temperatureMin { get; set; }
-        private string humidity { get; set; }
-        private string windSpeed { get; set; }
-        private string sunset { get; set; }
-        private string sunrise { get; set; }
-        private string lastUpdate { get; set; }
+        public string cityName { get; set; }
+        public string weatherDescription { get; set; }
+        public string temperature { get; set; }
+        public string maxTemperature { get; set; }
+        public string minTemperature { get; set; }
+        public string humidity { get; set; }
+        public string windSpeed { get; set; }
+        public string sunset { get; set; }
+        public string sunrise { get; set; }
+        public string lastUpdate { get; set; }
 
         public Location() { }
 

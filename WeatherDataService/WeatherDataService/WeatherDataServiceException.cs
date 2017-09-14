@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WeatherDataApp
+namespace WeatherDataService
 {
     public class WeatherDataServiceException : System.Exception
     {
@@ -14,7 +14,7 @@ namespace WeatherDataApp
         }
         public WeatherDataServiceException(String message) : base(message)
         {
-            Console.WriteLine("test exception in WeatherDataServiceException(String message)");
+            Console.WriteLine(message);
         }
         public WeatherDataServiceException(String message, Exception innerException) : base(message, innerException)
         {

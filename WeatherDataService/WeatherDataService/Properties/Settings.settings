@@ -3,7 +3,10 @@
   <Profiles />
   <Settings>
     <Setting Name="key" Type="System.String" Scope="User">
-      <Value Profile="(Default)">http://api.openweathermap.org/data/2.5/weather?q=Tel%20Aviv&amp;appid=750e0bb1e96731632166f191b3377bae</Value>
+      <Value Profile="(Default)">750e0bb1e96731632166f191b3377bae</Value>
+    </Setting>
+    <Setting Name="url" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://api.openweathermap.org/data/2.5/weather?q=</Value>
     </Setting>
   </Settings>
 </SettingsFile>
