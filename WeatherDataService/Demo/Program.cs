@@ -4,7 +4,8 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
-using WeatherDataService;
+using WeatherDataApp;
+
 
 namespace Demo
 {
@@ -15,16 +16,25 @@ namespace Demo
             Location location = new Location();
             using (WebClient client = new WebClient())
             {
-                string xml = client.DownloadString(Properties.Settings.Default.url + "zip=94040&mode=xml&units=metric&appid=" + Properties.Settings.Default.key);
+                try
+                {
+                    string xml = client.DownloadString(Properties.Settings.Default.url + "q=Tel Aviv&mode=xml&units=metric&appid=" + Properties.Settings.Default.key);              
+                }
+                catch 
+                {          
+                    try
+                    {
+                        throw new WeatherDataServiceException("test exception");
+                    }
+                    catch (WeatherDataServiceException e)
+                    {
+                        Console.WriteLine(e.Message);
+                    }
+                }
+
             }
-            try
-            {
-                throw new WeatherDataServiceException("test exception");
-            }
-            catch(WeatherDataServiceException e)
-            {
-                Console.WriteLine(e.Message);
-            }
+            
+            
         }
     }
 }
